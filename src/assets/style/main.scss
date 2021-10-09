@@ -1,0 +1,123 @@
+$primary: #5f4591;
+$second: #352641;
+$pink: #d47fa6;
+
+// font
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+// link
+a {
+    color: $primary;
+    &:hover {
+        color: $second;
+    }
+}
+// start
+.outLayer {
+    background-color: rgba($color: $primary, $alpha: 0.07);
+    height: 100vh;
+    .todo{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 417px;
+        min-height: 635px;
+        height: 89vh;
+        background-color: #f8f8f8;
+        border-radius: 44px;
+        box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+
+    // ----- todo task ------
+    .main {
+        background-color: $primary;
+        padding: 2rem 2.4rem;
+        border-radius: 0 0 0 88px;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 42px;
+        span {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            
+            &:first-child {
+            top: 0;
+            left: 0;
+            }
+            &:nth-child(2) {
+            top: 0;
+            right: 0;
+            }
+            &:nth-child(3) {
+            left: 0;
+            bottom: 0;
+            }
+            &:last-child {
+            right: 0;
+            bottom: 0;
+            }
+        }
+        }
+    }
+    }
+
+    // button
+    .activeBtn{
+    border-color: #ffffff00;
+    background-color: $pink;
+    border-radius: 50px;
+    }
+
+    .btn-outline-light {
+    border-color: #ffffff00;
+    padding: 5px 14px;
+    color: white;
+    &:hover {
+        background-color: rgba($color: $pink, $alpha: 0.87);
+        color: white;
+        border-radius: 50px;
+    }
+    }
+    // items
+    .itemsAdd {
+    overflow: scroll;
+    }
+    .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.4rem;
+    border-radius: 50px;
+    background-color: white;
+    margin: 1rem 1.2rem;
+
+    .inputTxt {
+        width: 100%;
+    }
+    input {
+        border-color: white;
+        border-style: none;
+        &:focus-visible {
+        outline: white;
+        }
+    }
+    label {
+        width: 80%;
+    }
+    .checkTrue {
+        text-decoration:line-through;
+    }
+}
