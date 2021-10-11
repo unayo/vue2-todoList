@@ -1,4 +1,4 @@
-# vue2-todo
+# [vue2-todo](https://unayo.github.io/vue2-todoList/dist/#/)
 
 ## Project setup
 ```
@@ -19,6 +19,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
