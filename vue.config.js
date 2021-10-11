@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/vue2-todoList/'
+    publicPath: '/vue2-todoList/dist/'
 }
