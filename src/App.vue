@@ -9,7 +9,7 @@
             <span></span>
             <span></span>
           </div>
-          <h1>To Do List</h1>
+          <h1>To Do List {{ text }}</h1>
           <div class="btnGroup">
             <b-link
               @click.prevent=" btn ='all' "
@@ -59,13 +59,13 @@
             <div v-for="(item, key) in filterData" :key="key" class="items">
               <div @click="starToggle(item)" 
               >
-                <i v-if="item.starIcon" class="bi bi-star-fill"></i>
-                <i v-else class="bi bi-star"></i>
+                <i v-if="item.starIcon" class="bi bi-star"></i>
+                <i v-else class="bi bi-star-fill"></i>
               </div>
               <input 
                 :id="item.id" 
                 type="checkbox" 
-                :checked="item.isChecked" 
+                :checked="isChecked" 
                 @click="checkToggle(item)"
               >
               <label 
@@ -107,7 +107,7 @@ export default {
           readonly: 'readonly',
           isChecked: false,
           visibility: "all",
-          starIcon: false,
+          starIcon: true,
         }
       );
       console.log(this.data);
@@ -132,17 +132,15 @@ export default {
     filterData() {
       switch ( this.btn ){
         case 'work':
-          return this.data.filter( item=>{
-            return item.isChecked === false
-          });
+          return this.data;
         case 'important':
-          return this.data.filter( item=>
+          return this.data.filter( item=>{
             item.starIcon === true
-          );
+          });
         case 'done':
-          return this.data.filter( item=>
+          return this.data.filter( item=>{
             item.isChecked === true
-          );
+          });
         default:
           return this.data;
       }
